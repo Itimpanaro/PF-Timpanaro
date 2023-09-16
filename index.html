@@ -3,37 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aprovechá Más estilos Nike. Zapatillas, Indumentaria, Mochilas, Accesorios y mucho más. Modelos: Fútbol, Running, Air Max, Air Force, Dunk, Jordan.">
-    <meta name="keywords"  content="zapatillas, moda, running, jordan, nike, pantalon, deportivo, ropa, remera, buzo">
+    <meta name="description" content="Aprovechá Más estilos Nike. Zapatillas, Accesorios y mucho más. Modelos: Fútbol, Running, Basket, Dunk, Jordan.">
+    <meta name="keywords"  content="zapatillas, moda, running, jordan, nike, deportivo, basket">
+    <link rel="icon" href="imagenes/nikeIcon.png">
     <title>Nike Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <a href="index.html"><img class="banner-img" src="imagenes/LogoNike.png" alt="Logo Nike"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </nav>
-          <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-            <div class="bg-light">
-                <nav>
-                    <ul class="navbar-nav justify-content-center">
-                        <li class="nav-item p-5"><a href="index.html" class="text-decoration-none h4">NIKE</a></li>
-                        <li class="nav-item p-5"><a href="productos.html" class="text-decoration-none h4">AIR JORDAN SHOP</a></li>
-                        <li class="nav-item p-5"><a href="nosotros.html" class="text-decoration-none h4">SOBRE NOSOTROS</a></li>
-                        <li class="nav-item p-5"><a href="contacto.html" class="text-decoration-none h4">CONTACTO</a></li>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid justify-content-space">
+                <a class="navbar-brand" href="index.html"><img class="banner-img" src="imagenes/LogoNike.png" alt="Logo de NIKE en negro"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-center container justify-content-around">
+                        <li class="nav-item h3 fw-bold">
+                            <a class="nav-link active resaltar" href="index.html">NIKE</a>
+                        </li>
+                        <li class="nav-item h3 fw-bold">
+                            <a class="nav-link active resaltar" href="productos.html">Air Jordan Shop</a>
+                        </li>
+                        <li class="nav-item h3 fw-bold">
+                            <a class="nav-link active resaltar" href="nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item h3 fw-bold">
+                            <a class="nav-link active resaltar" href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
             </div>
-          </div>
+        </nav>
     </header>
     <main>
         <section id="banner">
@@ -44,21 +49,52 @@
             </div>
         </section>
 
-        <h2 class="text-center pt-5">Productos Destacados</h2>
+        
         <section id="muestra">
-            <a class="muestra__a" href="productos.html"><img class="muestra__img-1" src="imagenes/jordan1.png" alt="Producto destacado Nike Air Jordan 1"></a>
-            <a class="muestra__a" href="productos.html"><img class="muestra__img-2" src="imagenes/jordan2.png" alt="Producto destacado Nike Air Jordan 2"></a>
-            <a class="muestra__a" href="productos.html"><img class="muestra__img-3" src="imagenes/jordan3.png" alt="Producto destacado Nike Air Jordan 3"></a>
-            <a class="muestra__a" href="productos.html"><img class="muestra__img-4" src="imagenes/jordan4.png" alt="Producto destacado Nike Air Jordan 4"></a>
+            <div class="text-center pt-5 h2">Productos Destacados</div>
+            <div class="muestra__div">
+                <div class="muestra__1">
+                    <a class="muestra__a" href="productos.html"><img class="muestra__img-1" src="imagenes/jordan1.png" alt="Zapatilla Air Jordan 1 mid blanca y naraja"></a>
+                    <a class="muestra__a" href="productos.html"><img class="muestra__img-2" src="imagenes/jordan2.png" alt="Zapatilla Air Jordan 2 mid blanca"></a>
+                </div>
+                <div class="muestra__2">    
+                    <a class="muestra__a" href="productos.html"><img class="muestra__img-3" src="imagenes/jordan3.png" alt="Zapatilla Air Jordan 3 low blanca"></a>
+                    <a class="muestra__a" href="productos.html"><img class="muestra__img-4" src="imagenes/jordan4.png" alt="Zapatilla Air Jordan 4 low blanca y rosa"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="carousel">
+            <div id="carouselControl" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="contacto.html"><img src="imagenes/bannerContacto.jpg" class="d-block w-100" alt="Leyenda Sumate a la comunidad, en fondo negro con logo Nike"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="productos.html"><img src="imagenes/descuento.png" class="d-block w-100" alt="Leyenda nike oportunidades, hasta 20% de descuento."></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="productos.html"><img src="imagenes/bannerPromo.jpg" class="d-block w-100" alt="Envío Gratis en compras mayores a $60000 y 6 cuotas sin interes."></a>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControl" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselControl" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </section>
     </main>
     <footer>
         <div class="footer__div">
-            <h3>Nike</h3>
+            <h2 class="h1">Nike</h2>
             <p>Ofrecer inspiración e innovación a todos los atletas* del mundo.<br> <cite class="text-secondary">*Si tienes cuerpo, eres atleta</cite></p>
         </div>
         <div class="footer__div">
-            <h5 class="text-center">Navegador</h5>
+            <h3 class="text-center">Navegador</h3>
             <nav class="footer__div-nav">
                 <ul class="footer__div-ul">
                     <li class="footer__div-item"><a class="footer__div-a" href="#">Inicio</a></li>
@@ -78,11 +114,11 @@
             </div>
 
             <div class="text-center footer__div-div">  
-                <h6 class="text-center item-1">Redes Sociales</h6>
-                <a class="item-2" href=""><img src="imagenes/blanco.jpg" alt=""></a>
-                <a class="item-3" href=""><img src="imagenes/blanco.jpg" alt=""></a>
-                <a class="item-4" href=""><img src="imagenes/blanco.jpg" alt=""></a>
-                <a class="item-5" href=""><img src="imagenes/blanco.jpg" alt=""></a>
+                <h4 class="text-center item-1">Redes Sociales</h4>
+                <a class="item-2" href=""><img src="imagenes/instagram.png" alt="Seguir a Nike en Instagram"></a>
+                <a class="item-3" href=""><img src="imagenes/youtube.png" alt="Seguir a Nike en Youtube"></a>
+                <a class="item-4" href=""><img src="imagenes/twitter.png" alt="Seguir a Nike en Twitter"></a>
+                <a class="item-5" href=""><img src="imagenes/facebook.png" alt="Seguir a Nike en Facebook"></a>
             </div>
         </div>
    </footer>

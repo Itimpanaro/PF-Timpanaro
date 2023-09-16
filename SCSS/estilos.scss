@@ -1,3 +1,5 @@
+@import 'colores';
+
 $celular: 480px;
 $tablet: 768px;
 
@@ -24,43 +26,34 @@ $tablet: 768px;
     font-family: 'poppins', sans-serif;
 }
 
-.head__{
-    &div{
-        background-color: #808080;
-        text-align: right;
-        &-a{
-            position: relative;
-            right: 4%;
-            text-decoration: none;
-            color: #000000;
-            font-size: 23px;
-            &:hover{
-                color: #ffffff;
-            }
-        }
-    }
-
-    &nav{
-        position: relative;
-        text-align: center;
-        &-img{
-            width: 10%;
-            height: 10%;
-            margin: 0 5% 0 0;
-            &:hover{
-                filter: drop-shadow(3px 3px #707070);
-            }
-        }
-    }       
-}
-
-.banner-img{
-    width: 250px;
-}
-
 @for $i from 1 through 6{
     h#{$i}{
-        font-family: 'Bebas Neue', sans-serif;;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+}
+
+header{
+    position: fixed; 
+    z-index: 9999999; 
+    width: 100%;
+    nav{
+        div{
+            a{
+                padding: 0%!important;
+                .banner-img{
+                    width: 180px;
+                }
+            }
+            div{
+                ul{
+                    li{
+                        .resaltar:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -68,18 +61,18 @@ $tablet: 768px;
     animation: entrada 1s;
     .banner__div{
         display: flex;
-        background-color: black;
+        background-color: $negro;
         overflow: hidden;
         width: 100%;
         height: 500px;
         align-items: flex-end;
         justify-content: flex-end;
         &-text{
-            font-family: 'Bebas Neue', sans-serif;;
+            font-family: 'Bebas Neue', sans-serif;
             position: absolute;
             font-size: 200px;
             left: 8%;
-            color: #ffffff;
+            color: $blanco;
             z-index: 3;
         }
         & .gradiente-1{
@@ -128,22 +121,38 @@ $tablet: 768px;
     }
 }
 
+#carousel{
+    position: relative;
+    padding-bottom: 5%;
+    width: 90%;
+    margin: auto;
+}
+
 #muestra{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
-    animation: entrada 1.5s;    
-    @for $i from 1 through 4{
-        .muestra__img-#{$i}{
-            width: 100%;
-            border-radius: 100%;
-            padding: 3% 10%;
-            &:hover{
-                filter: drop-shadow(5px 5px 10px #000000);
+    animation: entrada 1.5s;
+    padding-bottom: 5%;
+    .muestra__div{
+        display: flex;
+        flex-direction: row;
+        .muestra__1 , .muestra__2{
+            display: flex;
+            flex-direction: row;
+            @for $i from 1 through 4{
+                .muestra__img-#{$i}{
+                    width: 100%;
+                    border-radius: 100%;
+                    padding: 3% 10%;
+                    &:hover{
+                        filter: drop-shadow(5px 5px 10px $negro);
+                    }
+                }
             }
         }
-    }
+    }   
 }
 
 footer{
@@ -153,17 +162,11 @@ footer{
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
-    background-color: #000000;
+    background-color: $negro;
     padding: 4% 2%;
-    color: #ffffff;
+    color: $blanco;
     .footer__div{
         width: 33%;
-        h4{
-            font-size: 35px;
-        }
-        h5{
-            font-size: 28px;
-        }
         p{
             font-size: 26px;
         }
@@ -177,35 +180,31 @@ footer{
         }
         &-a{
             text-decoration: none;
-            color: #9c9c9c;
+            color: $gris;
             &:hover{
-                color: #ffffff;
+                color: $blanco;
             }
         }
         &-form{
             width: 33%;
-            font-size: 26px;
+            font-size: 20px;
+            #email{
+                width: 70%;
+            }
         }
         &-div{
             padding: 7% 0;
             & a{
-            padding: 1%;
-            }
-            h6{
-                margin: 0;
-                font-size: 26px;
+                padding: 1%;
             }
             & img{
                 width: 43px;
                 height: 43px;
                 border-radius: 100%;
+                background-color: $blanco;
             }
         }
     }
-}
-
-#email{
-    width: 70%;
 }
 
 #productos{
@@ -217,21 +216,22 @@ footer{
     gap: 40px 10px;
     text-align: center;
     animation: entrada 1s;
+    padding-bottom: 5%;
     .productos__article{
-        border: 2px solid #000000;
+        border: 2px solid $negro;
         padding-bottom: 100px;
         border-radius: 30px 30px 30px 30px;
-        background-color: #f5f5f5f5;
+        background-color: $blancoProducto;
         overflow: hidden;
         animation: entrada 1.5s;
         &:hover{
-            box-shadow: 0px 0px 0px 5px #60606099;
+            box-shadow: 0px 0px 0px 5px $grisSombra;
         }
         a{
             position: relative;
             top: -40px;
             text-decoration: none;
-
+            
         }
         p{
             display: block;
@@ -248,8 +248,8 @@ footer{
             border-radius: 30px;
             top: 5%;
             padding: 0px 20px;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: $negro;
+            color: $blanco;
         }
         .img-producto{
             width: 100%;
@@ -259,52 +259,62 @@ footer{
     }
 }
 
-iframe{
-    width: 100%;
-    height: 500px;
-}
-
-
-
 #contacto{
     animation: entrada 1.5s;
     .contacto__info{
-        background-color: #808080;
+        background-color: $negro;
+        .iconos{
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            background-color: $blanco;
+        }
     }
 }
 
 #nosotros{
     animation: entrada 1.5s;
+    iframe{
+        width: 100%;
+        height: 500px;
+    }
 }
 
 @media (max-width: $tablet){
 
-    .banner-img{
-        width: 175px;
+    header{
+        nav{
+            div{
+                a{
+                    .banner-img{
+                       width: 150px;
+                    }
+                }
+            }
+        }
     }
     #banner .banner__div{
         height: 340px;
         &-text{
-            font-size: 147px;
+            font-size: 145px;
+            left: 1%;
         }
     }
 
     #muestra{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        .muestra__a{
-            text-align: center;
-        }
-        .muestra__img{
-            width: 80%;
-            padding: 1% 5%;
+        display: flex;
+        flex-direction: column;
+        .muestra__div{
+            .muestra__1, .muestra__2{
+                flex-direction: column;
+            }
         }
     }
 
     #productos{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        padding-bottom: 10%;
         .productos__article{
             overflow: hidden;
             & h5{
@@ -368,12 +378,22 @@ iframe{
 }
 @media (max-width: $celular){
 
-    .banner-img{
-        width: 100px;
+    header{
+        nav{
+            div{
+                a{
+                    .banner-img{
+                       width: 100px;
+                    }
+                }
+            }
+        }
     }
+
     #banner .banner__div{
         height: 250px;
         &-text{
+            left: 5%;
             font-size: 80px;
         }
     }
@@ -407,18 +427,19 @@ iframe{
         .footer__div{
             width: 100%;
             padding: 3%;
-            & h4{
-                font-size: 24px;
+            & h3{
+                font-size: 27px;
             }
             & p{
                 font-size: 18px;
             }
-            & h5{
-                font-size: 20px;
-            }
             &-form{
                 font-size: 14px;
                 width: 100%;
+                #email{
+                    width: 50%;
+                    margin: 5px;
+                }
             }
             &-div{
                 width: 80%;
@@ -444,15 +465,14 @@ iframe{
             }
         }
     }
+    
 
-    #email{
-        width: 50%;
-        margin: 5px;
-    }
-
-    iframe{
-        width: 100%;
-        height: 200px;
+    #nosotros{
+        iframe{
+            width: 100%;
+            height: 100%;
+            padding: 5%;
+        }
     }
 
 }
